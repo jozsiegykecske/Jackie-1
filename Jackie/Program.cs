@@ -30,6 +30,18 @@ namespace Jackie
 
     private static void NegyedikFeladat()
     {
+      Console.Write("4.feladat: ");
+      int legnagyobb = 0;
+      int ev=0;
+      for (int i = 0; i < lista.Count; i++)
+      {
+        if (lista[i].Races>legnagyobb)
+        {
+          legnagyobb = lista[i].Races;
+          ev = lista[i].Year;
+        }
+      }
+      Console.WriteLine($"{ev}");
     }
 
     private static void HarmadikFeladat()
