@@ -9,9 +9,9 @@ namespace Jackie
 {
   class Program
   {
+    static List<Race> lista = new List<Race>();
     static void Main(string[] args)
     {
-      ElsoFeladat();
       MasodikFeladat();
       HarmadikFeladat();
       NegyedikFeladat();
@@ -38,10 +38,18 @@ namespace Jackie
 
     private static void MasodikFeladat()
     {
-    }
+      Console.WriteLine("Második Feladat: Adatok beolvasása!");
+      StreamReader be = new StreamReader("Jackie.txt");
 
-    private static void ElsoFeladat()
-    {
+      be.ReadLine();
+
+      while (!be.EndOfStream)
+      {
+        string[] a = be.ReadLine().Split('\t');
+        lista.Add(new Race(int.Parse(a[0]), int.Parse(a[1]), int.Parse(a[2]), int.Parse(a[3]), int.Parse(a[4]), int.Parse(a[5]))); 
+        //Console.WriteLine(be.ReadLine()); [Beolvasás ellenőrzése]
+      }
+      be.Close();
     }
   }
 }
