@@ -25,7 +25,25 @@ namespace Jackie
     }
 
     private static void OtodikFeladat()
-    {  
+    {
+      // 2 változó az évtizedeknek
+      // Végigmegyünk az adatokon
+      //    megnézzük hogy melyik évtized és hozzáadjuk a megfelelő évtizedhez
+      int hatvan = 0;
+      int hetven = 0;
+      for (int i = 0; i < lista.Count; i++)
+      {
+        if (lista[i].Year<1970)
+        {
+          hatvan += lista[i].Wins;
+        }
+        else
+        {
+          hetven += lista[i].Wins;
+        }
+      }
+      Console.WriteLine($"60-s évek: {hatvan} megnyert verseny");
+      Console.WriteLine($"70-s évek: {hetven} megnyert verseny");
     }
 
     private static void NegyedikFeladat()
