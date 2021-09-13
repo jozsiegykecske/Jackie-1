@@ -34,12 +34,14 @@ namespace Jackie
 
     private static void HarmadikFeladat()
     {
+      Console.Write("3.feladat: ");
+      Console.WriteLine("{0}",lista.Count);
     }
 
     private static void MasodikFeladat()
     {
-      Console.WriteLine("Második Feladat: Adatok beolvasása!");
-      StreamReader be = new StreamReader("Jackie.txt");
+      Console.WriteLine("2. Feladat: Adatok beolvasása:");
+      StreamReader be = new StreamReader("jackie.txt");
 
       be.ReadLine();
 
